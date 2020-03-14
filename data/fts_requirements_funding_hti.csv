@@ -1,0 +1,40 @@
+countryCode,id,name,code,startDate,endDate,year,requirements,funding,percentFunded
+#country+code,#activity+appeal+id+fts_internal,#activity+appeal+name,#activity+appeal+id+external,#date+start,#date+end,#date+year,#value+funding+required+usd,#value+funding+total+usd,#value+funding+pct
+HTI,,Not specified,,,,2021,,1571333,
+HTI,920,Haiti 2020,HHTI20,2020-01-01,2020-12-31,2020,253021922,9336351,4
+HTI,,Not specified,,,,2020,,11548072,
+HTI,679,Haiti 2019,HHTI19,2019-01-01,2019-12-31,2019,126207627,45077176,36
+HTI,,Not specified,,,,2019,,38806430,
+HTI,649,Haiti 2018,HHTI18,2018-01-01,2018-12-31,2018,252200142,29602801,12
+HTI,,Not specified,,,,2018,,48664940,
+HTI,543,Haiti 2017,HHTI17,2017-01-01,2017-12-31,2017,192223638,76310037,40
+HTI,,Not specified,,,,2017,,46219870,
+HTI,506,Haiti 2016,HHTI16,2016-01-01,2016-12-31,2016,193786861,68480943,35
+HTI,527,Haiti Flash Appeal: Hurricane Matthew 2016,FHTI16,2016-10-10,2016-12-31,2016,139026849,86399238,62
+HTI,,Not specified,,,,2016,,79412926,
+HTI,489,Haiti 2015 Urgent Request for Humanitarian Funding,FHTI15,2015-08-17,2015-12-31,2015,25520762,13300781,52
+HTI,,Not specified,,,,2015,,47600063,
+HTI,432,Haiti Humanitarian Action Plan 2014,HHTI14,2014-01-01,2014-12-31,2014,157454953,126466687,80
+HTI,,Not specified,,,,2014,,74947573,
+HTI,422,Haiti Humanitarian Action Plan 2013,CHTI13,2013-01-01,2013-12-31,2013,152343810,72771635,48
+HTI,,Not specified,,,,2013,,62320820,
+HTI,385,Haiti 2012,CHTI12,2012-01-01,2012-12-31,2012,151080810,70311344,47
+HTI,,Not specified,,,,2012,,56166352,
+HTI,362,Haiti 2011,CHTI1011,2010-12-01,2011-12-31,2011,379171669,220820927,58
+HTI,,Not specified,,,,2011,,277293477,
+HTI,337,Haiti Humanitarian Appeal (Revised) (January - December 2010),FHTI10,2010-01-12,2010-12-31,2010,1477609802,1100330757,74
+HTI,,Not specified,,,,2010,,2487179190,
+HTI,,Not specified,,,,2009,,18050192,
+HTI,286,Haiti Flash Appeal (Revised) 2008,FHTI0809,2008-09-01,2009-03-31,2008,121100791,73233898,60
+HTI,,Not specified,,,,2008,,170208007,
+HTI,,Not specified,,,,2007,,38122327,
+HTI,,Not specified,,,,2006,,25926282,
+HTI,,Not specified,,,,2005,,14909386,
+HTI,160,Haiti Floods  2004,FHTI0405,2004-10-01,2005-03-31,2004,862840,17529992,2032
+HTI,155,Haiti  2004,FHTI04,2004-03-01,2004-08-31,2004,35797594,15422992,43
+HTI,,Not specified,,,,2004,,46881227,
+HTI,125,Haiti (PIR) 2003,OHTI03,2003-03-01,2003-08-31,2003,14400757,5433279,38
+HTI,,Not specified,,,,2003,,36265919,
+HTI,,Not specified,,,,2002,,692430,
+HTI,,Not specified,,,,2001,,110174,
+HTI,237,Haiti Appel Transitionnel 2007,,,,,,13473205,
