@@ -13,7 +13,7 @@ let state = {
 };
 
 /* LOAD DATA */
-d3.csv("../data/caffeince-calories-regional.csv", d3.autoType).then(raw_data => {
+d3.csv("../data/caffeine-calories-regional.csv", d3.autoType).then(raw_data => {
     console.log("raw_data", raw_data);
     state.data = raw_data;
     init();
