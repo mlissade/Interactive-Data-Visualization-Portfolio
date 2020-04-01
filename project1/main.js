@@ -107,7 +107,7 @@ function draw() {
                   if (d.category === "CHOCOLATE") return "blue";
                   else if (d.category === "COFFEE") return "magenta";
                   else if (d.category === "NON-DRINK") return "orange";
-                  else if (d.category === "SOFT DRINK") return "purple"
+                  else if (d.category === "SOFT DRINK") return "cyan"
                   else return "lime";
                 })
                 .attr("r", radius)
@@ -116,7 +116,7 @@ function draw() {
                 .call(enter =>
                   enter
                     .transition() // initialize transition
-                    .delay(d => 500 * d.Calories) // delay on each element
+                    .delay(d => d.Calories) // delay on each element
                     .duration(200)
                     .attr("cy", d => yScale(d.Calories))
                     .attr("cx", d => xScale(d.Caffeine))
@@ -137,7 +137,7 @@ function draw() {
               // + HANDLE EXIT SELECTION
                 exit
                   .transition()
-                  .delay(d => 500 * d.Calories)
+                  .delay(d => d.Calories)
                   .duration(200)
                   .attr("cy", margin.top)
                   .attr("cx", width)
