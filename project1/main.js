@@ -19,6 +19,12 @@ d3.csv("../data/caffeine-calories-regional.csv", d3.autoType).then(raw_data => {
     init();
 });
 
+// const annotations = {
+//   data: { coffee: d => d.coffee, caffeine: d => d.Caffeine, calories: d =>d.Calories },
+//   x: d => d.Caffeine,
+//   y: d => d.Calories,
+// };
+
 /* INITIALIZING FUNCTION */
 function init() {
     // Creating the scales
@@ -81,7 +87,7 @@ function init() {
         .attr("dx", "-3em")
         .attr("writing-mode", "vertical-rl")
         .text("Calories");
-    
+
     draw();       
 }
 
@@ -92,6 +98,14 @@ function draw() {
         filteredData = state.data.filter(d => d.category === state.selection);
     }
 
+    // Adding annotations for points
+    // let annotations = d3
+    //   .annotation()
+    //   .accessors({
+    //     x: d => d.Caffeine,
+    //     y: d => d.Calories,
+    //   })
+
     const dot = svg
         .selectAll(".dot")
         .data(filteredData, d => d.key)
@@ -100,7 +114,7 @@ function draw() {
               enter // + HANDLE ENTER SELECTION
                 .append("circle")
                 .attr("class", "dot") // Note: this is important so we can identify it in future updates
-                .attr("stroke", "lightgrey")
+                .attr("stroke", "black")
                 .attr("opacity", 0.7)
                 // "ALL", "CHOCOLATE", "COFFEE", "NON-DRINK", "SOFT DRINK", "TEA"
                 .attr("fill", d => {
@@ -130,7 +144,7 @@ function draw() {
                   .attr("stroke", "black")
                   .transition()
                   .duration(200)
-                  .attr("stroke", "lightgrey")
+                  .attr("stroke", "black")
               ),
             exit => 
               exit.call(exit =>
