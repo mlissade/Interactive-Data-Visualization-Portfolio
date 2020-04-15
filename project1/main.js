@@ -19,12 +19,6 @@ d3.csv("../data/caffeine-calories-regional.csv", d3.autoType).then(raw_data => {
     init();
 });
 
-// const annotations = {
-//   data: { coffee: d => d.coffee, caffeine: d => d.Caffeine, calories: d =>d.Calories },
-//   x: d => d.Caffeine,
-//   y: d => d.Calories,
-// };
-
 /* INITIALIZING FUNCTION */
 function init() {
     // Creating the scales
@@ -87,7 +81,7 @@ function init() {
         .attr("dx", "-3em")
         .attr("writing-mode", "vertical-rl")
         .text("Calories");
-
+        
     draw();       
 }
 
@@ -112,28 +106,41 @@ function draw() {
         .join(
             enter => 
               enter // + HANDLE ENTER SELECTION
-                .append("circle")
-                .attr("class", "dot") // Note: this is important so we can identify it in future updates
-                .attr("stroke", "black")
-                .attr("opacity", 0.7)
-                // "ALL", "CHOCOLATE", "COFFEE", "NON-DRINK", "SOFT DRINK", "TEA"
-                .attr("fill", d => {
-                  if (d.category === "CHOCOLATE") return "blue";
-                  else if (d.category === "COFFEE") return "magenta";
-                  else if (d.category === "NON-DRINK") return "orange";
-                  else if (d.category === "SOFT DRINK") return "cyan"
-                  else return "lime";
-                })
-                .attr("r", radius)
-                .attr("cx", d => margin.left)
-                .attr("cy", d => [height - margin.bottom]) // initial value - to be transitioned
+                .append("g")
+                .attr("class", "dot")
+                .attr("transform",`translate(${margin.left}, ${height - margin.bottom})`)
+                .call(
+                  enter =>
+                    enter
+                      .append("circle")
+                      // Note: this is important so we can identify it in future updates
+                      .attr("stroke", "black")
+                      .attr("opacity", 0.7)
+                      // "ALL", "CHOCOLATE", "COFFEE", "NON-DRINK", "SOFT DRINK", "TEA"
+                      .attr("fill", d => {
+                        if (d.category === "CHOCOLATE") return "blue";
+                        else if (d.category === "COFFEE") return "magenta";
+                        else if (d.category === "NON-DRINK") return "orange";
+                        else if (d.category === "SOFT DRINK") return "cyan"
+                        else return "lime";
+                      })
+                      .attr("r", radius)
+                      // .attr("cx", d => margin.left)
+                      // .attr("cy", d => [height - margin.bottom])
+                  ) 
+                .call(
+                    enter =>
+                      enter
+                      .append("text")
+                      .text(d => d.Coffee)
+                      )
+                 // initial value - to be transitioned
                 .call(enter =>
                   enter
                     .transition() // initialize transition
                     .delay(d => d.Calories) // delay on each element
                     .duration(200)
-                    .attr("cy", d => yScale(d.Calories))
-                    .attr("cx", d => xScale(d.Caffeine))
+                    .attr("transform", d => `translate(${xScale(d.Caffeine)}, ${yScale(d.Calories)})`)
                 ),
             update => 
               update.call(update =>
@@ -153,8 +160,7 @@ function draw() {
                   .transition()
                   .delay(d => d.Calories)
                   .duration(200)
-                  .attr("cy", margin.top)
-                  .attr("cx", width)
+                  .attr("transform",`translate(${width}, ${margin.top})`)
                   .remove()
               )
            );
