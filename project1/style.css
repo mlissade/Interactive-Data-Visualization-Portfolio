@@ -1,30 +1,31 @@
 body {
-    /* ref: https://fonts.google.com/specimen/Source+Sans+Pro?selection.family=Source+Sans+Pro */
-    font-family: "Source Sans Pro", sans-serif;
-    padding: 1em 3em;
-    background-color: rgb(213, 255, 213);
-  }
-  
-  .dot {
-    cursor: pointer;
-  }
+  /* ref: https://fonts.google.com/specimen/Source+Sans+Pro?selection.family=Source+Sans+Pro */
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 1em 3em;
+  background-color: rgb(213, 255, 213);
+}
 
-  .dot text {
-    opacity: 0;
-    fill: black;
-    pointer-events: none;
-  }
-  .dot:hover text {
-    opacity: 1;
-  }
+.dot {
+  cursor: pointer;
+}
 
-  .dot:hover circle {
-    fill: yellow;
-  }
-  
-  .axis-label {
-    font-size: 14px;
-    fill: black;
-    text-anchor: middle;
-  }
-  
+.dot text {
+  opacity: 0;
+  fill: black;
+  text-anchor: middle;
+  pointer-events: none;
+}
+
+.dot:hover text {
+  opacity: 1;
+}
+
+.dot:hover circle {
+  fill: yellow;
+}
+
+.axis-label {
+  font-size: 14px;
+  fill: black;
+  text-anchor: middle;
+}
