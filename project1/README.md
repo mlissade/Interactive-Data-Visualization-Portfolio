@@ -14,4 +14,4 @@ This data could be represented using any of the following visualizations:
 
 These are the sketches of how these visualiztions would look and interact.
 
-![sketches and mockups](../project1/sketches.png)
+![sketches and mockups]("https://github.com/mlissade/Interactive-Data-Visualization-Portfolio/blob/master/project1/sketches.PNG?raw=true")
