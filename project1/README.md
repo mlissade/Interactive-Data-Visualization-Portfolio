@@ -12,4 +12,6 @@ This data could be represented using any of the following visualizations:
 - table with a bar graph display
 - circle map heirarchy with a click to zoom in feature
 
-The sketches of how these visualiztions would look and how they would interact can be found [here](../project1/sketches-and-mockups.pdf).
+These are the sketches of how these visualiztions would look and interact.
+
+![sketches and mockups](../project1/sketches.png)
