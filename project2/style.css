@@ -1,0 +1,23 @@
+body {
+  /* ref: https://fonts.google.com/specimen/Source+Sans+Pro?selection.family=Source+Sans+Pro */
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 1em 3em;
+  background-color: lavender;
+}
+
+.center {
+  text-align: center;
+}
+
+.axis {
+  font-size: 12px;
+}
+
+.label {
+  opacity: 0;
+  fill: black;
+}
+
+.label:hover {
+  opacity: 1;
+}
