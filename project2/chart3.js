@@ -31,7 +31,7 @@ export function chart3() {
       .scaleLinear()
       .domain([
         0,
-        d3.max(sortedData, d => d["Women average annual salary ($)"]),
+        d3.max(sortedData, d => d["Women average annual salary ($)"]) + 20000,
       ])
       .range([margin.left, width - margin.right]);
 
@@ -72,7 +72,8 @@ export function chart3() {
       .attr("y", d => yScale(d.Occupation))
       .text(d => d["Women average annual salary ($)"])
       .attr("dx", "10")
-      .attr("dy", "1.5em");
+      .attr("dy", "1.5em")
+      .attr("fill", "black");
 
     svg
       .append("g")

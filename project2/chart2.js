@@ -29,7 +29,10 @@ export function chart2() {
 
     const xScale = d3
       .scaleLinear()
-      .domain([0, d3.max(sortedData, d => d["Men average annual salary ($)"])])
+      .domain([
+        0,
+        d3.max(sortedData, d => d["Men average annual salary ($)"]) + 10000,
+      ])
       .range([margin.left, width - margin.right]);
 
     const yScale = d3
@@ -70,7 +73,7 @@ export function chart2() {
       .text(d => d["Men average annual salary ($)"])
       .attr("dx", "10")
       .attr("dy", "1.5em")
-      .attr("stroke", "white");
+      .attr("fill", "white");
 
     svg
       .append("g")

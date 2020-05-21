@@ -26,7 +26,7 @@ export function chart1() {
 
     const xScale = d3
       .scaleLinear()
-      .domain([0, d3.max(filteredData, d => d["Pay gap ($)"])])
+      .domain([0, d3.max(filteredData, d => d["Pay gap ($)"]) + 2500])
       .range([margin.left, width - margin.right]);
 
     const yScale = d3
@@ -37,8 +37,8 @@ export function chart1() {
 
     const yAxis = d3.axisLeft(yScale);
 
-    const xAxisBottom = d3.axisBottom(xScale).ticks(4, "$s");
-    const xAxisTop = d3.axisTop(xScale).ticks(4, "$s");
+    const xAxisBottom = d3.axisBottom(xScale).ticks(5, "$s");
+    const xAxisTop = d3.axisTop(xScale).ticks(5, "$s");
 
     const svg = d3
       .select("#d3-container-1")
@@ -67,7 +67,7 @@ export function chart1() {
       .text(d => d["Pay gap ($)"])
       .attr("dx", "10")
       .attr("dy", "1.5em")
-      .attr("stroke", "white");
+      .attr("fill", "white");
 
     svg
       .append("g")
@@ -84,7 +84,7 @@ export function chart1() {
       .attr("class", "axis-label")
       .attr("x", width / 2)
       .attr("dy", "3em")
-      .text("Annual salary Pay Gap in USD ($)");
+      .text("Annual salary pay gap ($)");
 
     svg
       .append("g")
