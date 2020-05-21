@@ -1,7 +1,7 @@
-const width = window.innerWidth * 0.7,
+const width = window.innerWidth * 0.9,
   height = window.innerHeight * 0.7,
   margin = { top: 20, bottom: 50, left: 120, right: 120 },
-  radius = 3.5;
+  radius = 5;
 
 let svg;
 let xScale;
@@ -111,14 +111,14 @@ function draw() {
               .append("circle")
               // Note: this is important so we can identify it in future updates
               .attr("stroke", "black")
-              .attr("opacity", 0.7)
+              .attr("opacity", 0.8)
               // "ALL", "CHOCOLATE", "COFFEE", "NON-DRINK", "SOFT DRINK", "TEA"
               .attr("fill", d => {
-                if (d.category === "CHOCOLATE") return "rgb(234,199,132)";
-                else if (d.category === "COFFEE") return "rgb(11,66,26)";
-                else if (d.category === "NON-DRINK") return "lime";
-                else if (d.category === "SOFT DRINK") return "rgb(53,4,4)";
-                else return "#272756";
+                if (d.category === "CHOCOLATE") return "#ffd6e0";
+                else if (d.category === "COFFEE") return "#fa7921";
+                else if (d.category === "NON-DRINK") return "#9bc53d";
+                else if (d.category === "SOFT DRINK") return "#5bc0eb";
+                else return "#fde74c";
               })
               .attr("r", radius)
           )
