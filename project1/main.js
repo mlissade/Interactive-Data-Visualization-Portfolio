@@ -1,7 +1,7 @@
 const width = window.innerWidth * 0.7,
   height = window.innerHeight * 0.7,
-  margin = { top: 20, bottom: 50, left: 60, right: 40 },
-  radius = 5;
+  margin = { top: 20, bottom: 50, left: 120, right: 120 },
+  radius = 3.5;
 
 let svg;
 let xScale;
@@ -67,7 +67,8 @@ function init() {
     .attr("class", "axis-label")
     .attr("x", "50%")
     .attr("dy", "3em")
-    .text("Caffeine (mg)");
+    .text("Caffeine (mg)")
+    .style("fill", "rgb(255,252,252)");
 
   // Adding yAxis
   svg
@@ -80,7 +81,8 @@ function init() {
     .attr("y", "50%")
     .attr("dx", "-3em")
     .attr("writing-mode", "vertical-rl")
-    .text("Calories");
+    .text("Calories")
+    .style("fill", "rgb(255,252,252)");
 
   draw();
 }
@@ -112,11 +114,11 @@ function draw() {
               .attr("opacity", 0.7)
               // "ALL", "CHOCOLATE", "COFFEE", "NON-DRINK", "SOFT DRINK", "TEA"
               .attr("fill", d => {
-                if (d.category === "CHOCOLATE") return "blue";
-                else if (d.category === "COFFEE") return "magenta";
-                else if (d.category === "NON-DRINK") return "orange";
-                else if (d.category === "SOFT DRINK") return "cyan";
-                else return "lime";
+                if (d.category === "CHOCOLATE") return "rgb(234,199,132)";
+                else if (d.category === "COFFEE") return "rgb(11,66,26)";
+                else if (d.category === "NON-DRINK") return "lime";
+                else if (d.category === "SOFT DRINK") return "rgb(53,4,4)";
+                else return "#272756";
               })
               .attr("r", radius)
           )

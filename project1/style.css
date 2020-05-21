@@ -2,7 +2,7 @@ body {
   /* ref: https://fonts.google.com/specimen/Source+Sans+Pro?selection.family=Source+Sans+Pro */
   font-family: "Source Sans Pro", sans-serif;
   padding: 1em 3em;
-  background-color: rgb(213, 255, 213);
+  background-color: rgb(58, 40, 25);
 }
 
 .dot {
@@ -11,7 +11,7 @@ body {
 
 .dot text {
   opacity: 0;
-  fill: black;
+  fill: rgb(255, 252, 252);
   text-anchor: middle;
   pointer-events: none;
 }
@@ -21,7 +21,7 @@ body {
 }
 
 .dot:hover circle {
-  fill: yellow;
+  fill: rgb(255, 252, 252);
 }
 
 .axis-label {
