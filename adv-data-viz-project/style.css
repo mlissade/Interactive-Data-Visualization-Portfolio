@@ -1,0 +1,22 @@
+body {
+  /* ref: https://fonts.google.com/specimen/Source+Sans+Pro?selection.family=Source+Sans+Pro */
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 1em 3em;
+  background-color: #f4f5f7;
+}
+
+.tab {
+  margin-left: 40px;
+}
+
+.center {
+  text-align: center;
+}
+
+.center-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 768px;
+  height: 361px;
+}
