@@ -1,88 +1,105 @@
 <!DOCTYPE html>
-  <head>
-    <meta charset="utf-8">
-    <title>Advanced Interactive Data Visualization Project</title>
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body>
-    <header class='center'>
-      <h1>NYC Top 311 Complaints During the COVID-19 Pandemic</h1>
-    </header>
-    <div class='center'>
-      <!-- Map Graph -->
-      <div class='tableauPlaceholder' id='viz1605567029587' style='position: relative;'>
-        <noscript>
-          <a href='#'>
-            <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;B3&#47;B3T7643ZP&#47;1_rss.png' style='border: none' />
-          </a>
-        </noscript>
-        <object class='tableauViz'  style='display:none;'>
-          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-          <param name='embed_code_version' value='3' /> 
-          <param name='path' value='shared&#47;B3T7643ZP' /> 
-          <param name='toolbar' value='yes' />
-          <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;B3&#47;B3T7643ZP&#47;1.png' /> 
-          <param name='animate_transition' value='yes' />
-          <param name='display_static_image' value='yes' />
-          <param name='display_spinner' value='yes' />
-          <param name='display_overlay' value='yes' />
-          <param name='display_count' value='yes' />
-          <param name='language' value='en' />
-          <param name='filter' value='publish=yes' />
-        </object>
-      </div>                
-      <script type='text/javascript'> 
-          var divElement = document.getElementById('viz1605567029587');                    
-          var vizElement = divElement.getElementsByTagName('object')[0];                    
-          vizElement.style.width='80%';
-          vizElement.style.height=(divElement.offsetWidth*0.35)+'px'; 
-          var scriptElement = document.createElement('script');
-          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
-          vizElement.parentNode.insertBefore(scriptElement, vizElement);                
-      </script>
-      <br>
-      <br>
-      <br>
-      <p>[text to be entered]</p>
-      <br>
-      <br>
- 
-      <!-- Bar Graphs -->
-      <div class='tableauPlaceholder' id='viz1605570176185' style='position: relative'>
-        <noscript>
-          <a href='#'>
-            <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DA&#47;DATA78000VisualProposal&#47;Dashboard2&#47;1_rss.png' style='border: none' />
-          </a>
-        </noscript>
-        <object class='tableauViz'  style='display:none;'>
-          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-          <param name='embed_code_version' value='3' /> 
-          <param name='site_root' value='' />
-          <param name='name' value='DATA78000VisualProposal&#47;Dashboard2' />
-          <param name='tabs' value='no' />
-          <param name='toolbar' value='yes' />
-          <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DA&#47;DATA78000VisualProposal&#47;Dashboard2&#47;1.png' /> 
-          <param name='animate_transition' value='yes' />
-          <param name='display_static_image' value='yes' />
-          <param name='display_spinner' value='yes' />
-          <param name='display_overlay' value='yes' />
-          <param name='display_count' value='yes' />
-          <param name='language' value='en' />
-        </object>
-      </div>                
-      <script type='text/javascript'>                    
-        var divElement = document.getElementById('viz1605570176185');
-        var vizElement = divElement.getElementsByTagName('object')[0];
-        if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} 
-        else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} 
-        else { vizElement.style.width='100%';vizElement.style.height='1027px';}                     
-        var scriptElement = document.createElement('script');                    
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
-        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
-      </script>
-    </div>
 
-    <script src="../lib/d3.js"></script>
-    <script src="./main.js" type="module"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Advanced Interactive Data Visualization Project</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+
+<body>
+  <header class='center'>
+    <h1 style='color:#f4f5f7'>NYC 311 Complaints During the COVID-19 Pandemic</h1>
+    <p class='p1'>
+      Exploring some of the top complaints<br>
+      that significantly changed since last year
+    </p>
+  </header>
+
+  <br>
+  <!-- During the COVID-19 pandemic in New York City, 311 had a huge surge in complaints.
+    The shutdown of all non-essential businesses in the state began March 22nd at 8 PM after Governor Andrew Cuomo signed the “New York on PAUSE” executive order.
+    This began the shutdown and quarantine of a lot of New Yorkers being indoors a lot more.
+    This is probably when 311 started to experience and increase in certain types of complaints.
+    Let's explore some of the top 15 complaints that had the highest percent increase between the previous and current year. -->
+
+
+  <!-- HEAT MAPS -->
+  <div class='tableauPlaceholder' id='viz1607417920164' style='position: relative'><noscript><a href='#'><img alt=' '
+          src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DA&#47;DATA78000Project&#47;Heatmaps&#47;1_rss.png'
+          style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+      <param name='embed_code_version' value='3' />
+      <param name='site_root' value='' />
+      <param name='name' value='DATA78000Project&#47;Heatmaps' />
+      <param name='tabs' value='no' />
+      <param name='toolbar' value='yes' />
+      <param name='static_image'
+        value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DA&#47;DATA78000Project&#47;Heatmaps&#47;1.png' />
+      <param name='animate_transition' value='yes' />
+      <param name='display_static_image' value='yes' />
+      <param name='display_spinner' value='yes' />
+      <param name='display_overlay' value='yes' />
+      <param name='display_count' value='yes' />
+      <param name='language' value='en' /></object></div>
+  <script type='text/javascript'>
+    var divElement = document.getElementById('viz1607417920164');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    if (divElement.offsetWidth > 800) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; }
+    else if (divElement.offsetWidth > 500) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; }
+    else { vizElement.style.width = '100%'; vizElement.style.height = '1077px'; }
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+  </script>
+
+  <p class="p2">
+    "Illegal fireworks" had the largest increase in complaints from 2019 to 2020 followed by "Home Delivered Meals -
+    Missed Deliveries" and "Non-Emergency Police Matters." While "Building Marshals office", "Litter Basket / Request",
+    "Homeless Encampment", and "Borough Office" show a -100% decrease in complaints
+  </p>
+  <br>
+  <br>
+
+  <!-- BAR GRAPHS -->
+  <div class='tableauPlaceholder' id='viz1607417774610' style='position: relative'><noscript><a href='#'><img alt=' '
+          src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DA&#47;DATA78000Project&#47;Change&#47;1_rss.png'
+          style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+      <param name='embed_code_version' value='3' />
+      <param name='site_root' value='' />
+      <param name='name' value='DATA78000Project&#47;Change' />
+      <param name='tabs' value='no' />
+      <param name='toolbar' value='yes' />
+      <param name='static_image'
+        value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DA&#47;DATA78000Project&#47;Change&#47;1.png' />
+      <param name='animate_transition' value='yes' />
+      <param name='display_static_image' value='yes' />
+      <param name='display_spinner' value='yes' />
+      <param name='display_overlay' value='yes' />
+      <param name='display_count' value='yes' />
+      <param name='language' value='en' />
+      <param name='filter' value='publish=yes' /></object></div>
+  <script type='text/javascript'>
+    var divElement = document.getElementById('viz1607417774610');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    if (divElement.offsetWidth > 800) { vizElement.style.width = '1000px'; vizElement.style.height = '427px'; }
+    else if (divElement.offsetWidth > 500) { vizElement.style.width = '1000px'; vizElement.style.height = '427px'; }
+    else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; }
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+  </script>
+  <br>
+  <br>
+  <p class='p3'>
+    Data source: <a
+      href='https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9'>NYC Open
+      Data 311 Service Requests from 2010 to Present</a><br>
+    [Extracted dates: March 3 - October 18 of 2019 and 2020]
+  </p>
+  <script src="../lib/d3.js"></script>
+  <script src="./main.js" type="module"></script>
+</body>
+
 </html>
