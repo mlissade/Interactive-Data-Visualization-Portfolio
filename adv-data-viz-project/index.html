@@ -2,26 +2,31 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Advanced Interactive Data Visualization Project</title>
+  <title>Advanced Interactive Data Visualization Studio Project</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 
 
 <body>
-  <header class='center'>
-    <h1 style='color:#f4f5f7'>NYC 311 Complaints During the COVID-19 Pandemic</h1>
-    <p class='p1'>
-      Exploring some of the top complaints<br>
-      that significantly changed since last year
+  <header>
+    <h1 class='title'>NYC 311 Complaints During the COVID-19 Pandemic</h1>
+    <p class='subtitle'>
+      Observing Top Complaints with<br>
+      Significant Change since Last Year
     </p>
   </header>
-
   <br>
-  <!-- During the COVID-19 pandemic in New York City, 311 had a huge surge in complaints.
-    The shutdown of all non-essential businesses in the state began March 22nd at 8 PM after Governor Andrew Cuomo signed the “New York on PAUSE” executive order.
-    This began the shutdown and quarantine of a lot of New Yorkers being indoors a lot more.
-    This is probably when 311 started to experience and increase in certain types of complaints.
-    Let's explore some of the top 15 complaints that had the highest percent increase between the previous and current year. -->
+  <br>
+  <br>
+  <p class="p1">
+    If you live in New York City, then you definitely have heard the illegal fireworks that went off almost every night
+    for several weeks over the summer. The 311 hotline ended up getting a lot of complaints about them but the
+    complaints did not stop there.<br><br>
+    What were New Yorkers complaining more about during the pandemic?<br>
+    What were they complaining about less?
+  </p>
+  <br>
+  <br>
 
 
   <!-- HEAT MAPS -->
@@ -53,13 +58,18 @@
     vizElement.parentNode.insertBefore(scriptElement, vizElement);                
   </script>
 
-  <p class="p2">
-    "Illegal fireworks" had the largest increase in complaints from 2019 to 2020 followed by "Home Delivered Meals -
-    Missed Deliveries" and "Non-Emergency Police Matters." While "Building Marshals office", "Litter Basket / Request",
-    "Homeless Encampment", and "Borough Office" show a -100% decrease in complaints
+
+  <p class="p1">
+    The chart below shows some of these top complaints that have changed since last year. "Illegal fireworks" had the
+    largest increase in complaints followed by "Home Delivered Meals - Missed Deliveries" and "Non-Emergency Police
+    Matters." While "Building Marshals office", "Litter Basket / Request","Homeless Encampment", and "Borough Office"
+    showed a -100% decrease in complaints.
   </p>
   <br>
   <br>
+  <br>
+  <br>
+
 
   <!-- BAR GRAPHS -->
   <div class='tableauPlaceholder' id='viz1607417774610' style='position: relative'><noscript><a href='#'><img alt=' '
@@ -92,11 +102,27 @@
   </script>
   <br>
   <br>
-  <p class='p3'>
+  <br>
+
+
+  <h3 style="text-align: center;">About the Data</h3>
+  <p class="p1">
+    During the COVID-19 pandemic in New York City, 311 had a huge surge in complaints. The shutdown of all non-essential
+    businesses in the state began March 22nd at 8 PM after Governor Andrew Cuomo signed the “New York on PAUSE”
+    executive order. This began the shutdown and quarantine of a lot of New Yorkers and the was the beginning of being
+    stuck indoors a lot more. This is probably when 311 started to become overwhelmed with a different variety of
+    complaints. The complaints chosen in these visualizations were the ones that had the biggest change over time; both
+    the top 15 increases and decreases are displayed. The data for 311 complaints can be found on NYC Open Data
+  </p>
+  <br>
+  <br>
+
+
+  <p class='p2'>
     Data source: <a
       href='https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9'>NYC Open
       Data 311 Service Requests from 2010 to Present</a><br>
-    [Extracted dates: March 3 - October 18 of 2019 and 2020]
+    [Extracted dates: March 22 - October 18 of 2019 and 2020]
   </p>
   <script src="../lib/d3.js"></script>
   <script src="./main.js" type="module"></script>
