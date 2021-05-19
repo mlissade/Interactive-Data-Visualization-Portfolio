@@ -28,6 +28,23 @@ header {
   padding-bottom: 36px;
 }
 
+.subheader {
+  text-align: center;
+  color: #ee6055;
+  font-weight: 600;
+}
+
+.p1 {
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+  width: 80%;
+}
+
+.p2 {
+  font-size: x-small;
+}
+
 /*
 .subtitle {
   color: #ffffff;
@@ -41,14 +58,4 @@ header {
 
 .tableauPlaceholder {
   margin: 0 auto;
-}
-
-.p1 {
-  text-align: center;
-  margin: 0 auto;
-  padding: 10px;
-}
-
-.p2 {
-  font-size: x-small;
 }
